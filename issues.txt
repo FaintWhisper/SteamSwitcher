@@ -1,0 +1,3 @@
+Fallos Conocidos:
+- Al intentar reiniciar Steam y al estar ejecutándose el programa no se reinicia correctamente.
+- Al eliminar un perfil que se encuentra eliminará todos los perfiles que se encuentren detrás de él, si es que hay alguno.

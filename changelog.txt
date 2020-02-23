@@ -1,0 +1,17 @@
+Changelog 0.9.4
+- Solucionado el error que detenía la ejecución de la aplicación hasta que no cerrase Steam al intentar iniciar sesión.
+- Mejorada la interfaz.
+- Añadidos manejadores de errores para controlar mejor la ejecución.
+
+Changelog 0.9.2
+- Solucionados numerosos errores al modificar un perfil existente.
+
+Changelog 0.9
+- Añadida la posibilidad de modificar un perfil por lo que ya no será necesario borrarlo y crearlo nuevamente para cambiar algún dato.
+
+Changelog 0.8
+- Añadido el borrado de los datos de un perfil desde la aplicación.
+
+Changelog 0.7
+- Añadido un gestor de cuentas.
+- Ahora es posible reiniciar Steam desde la aplicación.
