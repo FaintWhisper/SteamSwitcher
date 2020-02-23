@@ -41,10 +41,10 @@ echo							%T%. Reiniciar Steam
 set /a T+=1
 echo							%T%. Cerrar Steam
 set /a T+=1
-echo							%T%. Cerrar Aplicación
+echo							%T%. Cerrar AplicaciÃ³n
 echo.
 
-set /p Option=Introduzaca la opción deseada:
+set /p Option=Introduzaca la opciÃ³n deseada:
 
 set /a A=%UsersCreated%+1
 set /a B=%UsersCreated%+2
@@ -64,17 +64,17 @@ for /l %%o in (1,1,%UsersCreated%) do (
 
 :AddUser
 cls
-echo						 Intrdouzca el Usuario y la Contraseña.
-echo					Solo tendrá que introducir esta información una única vez.
+echo						 Intrdouzca el Usuario y la ContraseÃ±a.
+echo					Solo tendrÃ¡ que introducir esta informaciÃ³n una Ãºnica vez.
 echo.
-echo				   Asegúrese de estar en un lugar discreto antes de introducir los datos
+echo				   AsegÃºrese de estar en un lugar discreto antes de introducir los datos
 echo.
 echo.
 
 set /p DisplayName=Nombre a mostrar:
 set /p User=Usuario:
-set /p Password=Contraseña:
-echo Añadiendo Perfil...
+set /p Password=ContraseÃ±a:
+echo AÃ±adiendo Perfil...
 set /a UsersCreated+=1
 echo Users_Created:%UsersCreated%> settings.dat
 echo [%DisplayName%] %User% %Password% AutoLogOff> account%UsersCreated%.dat
@@ -102,11 +102,11 @@ if !AutoLog! equ AutoLogOn (goto :LoginSteam)
 
 echo                                             	Gestor de perfiles
 echo.
-echo						1. Iniciar Sesión en Steam
+echo						1. Iniciar SesiÃ³n en Steam
 if !AutoLog!==AutoLogOn (
-echo						2. Desabilitar inicio de sesión automático
+echo						2. Desabilitar inicio de sesiÃ³n automÃ¡tico
 ) else (
-echo						2. Habilitar inicio de sesión automático
+echo						2. Habilitar inicio de sesiÃ³n automÃ¡tico
 )
 echo						3. Modificar perfil
 echo						4. Eliminar perfil
@@ -114,7 +114,7 @@ echo						5. Volver al Inicio
 echo.
 echo.
 
-set /p Option2=Introduzca la opción deseada:
+set /p Option2=Introduzca la opciÃ³n deseada:
 
 if %Option2%==1 (goto :LoginSteam)
 if %Option2%==2 (goto :SetAutoLogin)
@@ -126,13 +126,13 @@ if %Option2% gtr 5 (goto :ManageProfile)
 
 :LoginSteam
 cls
-echo Iniciando sesión en Steam...
+echo Iniciando sesiÃ³n en Steam...
 timeout /t 3 /nobreak >nul
 start /D "C:\Program Files (x86)\Steam\" steam.exe -login %User% %Password%
 set AlreadyLog=Yes
 cls
-if %errorlevel%==0 (echo Sesión iniciada con éxito)
-if %errorlevel% gtr 0 (echo Se produjo un error al iniciar sesión)
+if %errorlevel%==0 (echo SesiÃ³n iniciada con Ã©xito)
+if %errorlevel% gtr 0 (echo Se produjo un error al iniciar sesiÃ³n)
 timeout /t 3 /nobreak >nul
 goto :ManageProfile
 
@@ -151,16 +151,16 @@ goto :ManageProfile
 
 :EditProfile
 cls
-echo							Modificación del Perfil
-echo					Si no desea modificar algún apartado déjelo en blanco
+echo							ModificaciÃ³n del Perfil
+echo					Si no desea modificar algÃºn apartado dÃ©jelo en blanco
 echo.
-echo				 Asegúrese de estar en un lugar discreto antes de introducir los datos
+echo				 AsegÃºrese de estar en un lugar discreto antes de introducir los datos
 echo.
 echo.
 
 set /p NewDisplayName=Nombre a mostrar:
 set /p NewUser=Usuario:
-set /p NewPassword=Contraseña:
+set /p NewPassword=ContraseÃ±a:
 
 if DisplayName equ "" (set NewDisplayName=%DisplayName%)
 if User equ "" (set NewUser=%User%)
@@ -202,7 +202,7 @@ echo Cerrando Steam...
 timeout /t 3 /nobreak >nul
 taskkill /im Steam.exe >nul 2>&1
 cls
-if %errorlevel%==0 (echo Steam se cerró correctamente.)
+if %errorlevel%==0 (echo Steam se cerrÃ³ correctamente.)
 if %errorlevel% geq 1 (echo Steam no se encuentra abierto.)
 
 timeout /t 3 /nobreak >nul
@@ -211,6 +211,6 @@ goto :Home
 
 :CloseApp
 cls
-echo Cerrando aplicación...
+echo Cerrando aplicaciÃ³n...
 timeout /t 3 /nobreak >nul
 exit
