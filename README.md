@@ -2,6 +2,8 @@
 
 Switch more fast between multiple steam accounts!
 
+**IMPORTANT NOTE**: This app is only available in spanish for now.
+
 ## Screenshots
 <div align="center">
     <img src="/screenshots/1.png" width="700px"></img>
