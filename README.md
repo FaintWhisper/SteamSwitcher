@@ -1,4 +1,4 @@
-# Steam Account-Manager v0.9b
+# Steam Account-Manager v1.0
 
 Switch more fast between multiple steam accounts!
 
