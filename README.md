@@ -2,7 +2,7 @@
 
 Switch more fast between multiple steam accounts!
 
-**IMPORTANT NOTE**: This app is only available in spanish for now.
+**IMPORTANT NOTE**: SteamSwitcher
 
 ## Screenshots
 <div align="center">
